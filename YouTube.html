@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yadelew Asrie">
+    <meta name="description" content="This webpage is developed for the purpose of storing videos on YouTube">
+    
+    <link rel="stylesheet" href="./YouTube_files/chase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./YouTube_files/css2" rel="stylesheet">
+    <title>YouTube</title>
+    
+    <link rel="icon" href="http://127.0.0.1:5500/you%20logo.png">
+    <link rel="icon" sizes="96x96" href="http://127.0.0.1:5500/you%20tube%20logo.png">
+<style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .btn5 {
+            animation: pulse 2s infinite;
+        }
+        
+        .dark-mode .boss,
+        .dark-mode .side-bar,
+        .dark-mode .video-preview {
+            background-color: #212121;
+            border-color: #303030;
+        }
+        
+        .dark-mode .search-bar,
+        .dark-mode .search-btn,
+        .dark-mode .voice-btn {
+            background-color: #121212;
+            border-color: #303030;
+            color: #f1f1f1;
+        }
+        
+        .dark-mode .icon-btn:hover {
+            background-color: #303030;
+        }
+        
+        .dark-mode .video-title {
+            color: #f1f1f1;
+        }
+        
+        .dark-mode .video-info {
+            color: #aaa;
+        }
+        
+        /* Fallback for missing icon images */
+        .icon-btn img {
+            background-color: transparent !important;
+        }
+        
+        /* Ensure icons are visible */
+        .search-icon,
+        .voice-icon,
+        .upload-icon,
+        .apps-icon,
+        .notifications-icon {
+            filter: brightness(0) invert(0);
+        }
+        
+        .dark-mode .search-icon,
+        .dark-mode .voice-icon,
+        .dark-mode .upload-icon,
+        .dark-mode .apps-icon,
+        .dark-mode .notifications-icon {
+            filter: brightness(0) invert(1);
+        }
+    </style></head>
+<body>
+    <header>
+        <div class="boss">
+            <div class="left">
+                <img src="./YouTube_files/hamburger-menu.svg" alt="hamburger-menu" class="hamburger-menu">
+                <img src="./YouTube_files/youtube-logo.svg" alt="youtube-logo" class="youtube-logo">
+            </div>
+            
+            <div class="middle">
+                <div class="search-container">
+                    <input type="text" placeholder="Search" class="search-bar">
+                    <button class="search-btn btn1">
+                        <img src="./YouTube_files/search.svg" alt="search" class="search-icon">
+                        <div class="tooltip" style="left: 50%; transform: translateX(-50%);">Search</div>
+                    </button>
+                </div>
+                <button class="voice-btn btn2">
+                    <img src="./YouTube_files/voice-search-icon.svg" alt="voice-search-icon" class="voice-icon">
+                    <div class="tooltip" style="left: 50%; transform: translateX(-50%);">Search with your voice</div>
+                </button>
+            </div>
+            
+            <div class="right">
+                <button class="icon-btn btn3">
+                    <img src="./YouTube_files/upload.svg" alt="upload" class="upload-icon">
+                    <div class="tooltip" style="left: 50%; transform: translateX(-50%);">Create</div>
+                </button>
+                <button class="icon-btn btn4">
+                    <img src="./YouTube_files/youtube-apps.svg" alt="youtube-apps" class="apps-icon">
+                    <div class="tooltip" style="left: 50%; transform: translateX(-50%);">YouTube apps</div>
+                </button>
+                <button class="icon-btn btn5">
+                    <img src="./YouTube_files/notifications.svg" alt="notifications" class="notifications-icon">
+                    <div class="tooltip" style="left: 50%; transform: translateX(-50%);">Notifications</div>
+                    <div class="notifications-count">3</div>
+                </button>
+                <button class="icon-btn dark-mode-toggle" title="Toggle dark mode" style="margin-left: 5px;">🌙</button><img src="./YouTube_files/yade.jpg" alt="Yadelew" class="user-profile">
+            </div>
+        </div>
+    </header>
+    
+    <aside class="sidebar-container">
+        <div class="side-bar">
+            <div class="side-link active">
+                <img src="./YouTube_files/home (1).svg" alt="Home">
+                <div>Home</div>
+            </div>
+            <div class="side-link">
+                <img src="./YouTube_files/explore.svg" alt="Explore">
+                <div>Explore</div>
+            </div>
+            <div class="side-link">
+                <img src="./YouTube_files/subscriptions.svg" alt="Subscriptions">
+                <div>Subscriptions</div>
+            </div>
+            <div class="side-link">
+                <img src="./YouTube_files/originals.svg" alt="Originals">
+                <div>Originals</div>
+            </div>
+            <div class="side-link">
+                <img src="./YouTube_files/youtube-music.svg" alt="YouTube Music">
+                <div>YouTube Music</div>
+            </div>
+            <div class="side-link">
+                <img src="./YouTube_files/library.svg" alt="Library">
+                <div>Library</div>
+            </div>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+        <div class="head" id="videoContainer"><div class="video-preview" data-id="1">
+            <div class="div1">
+                <img src="./YouTube_files/yade.jpg" alt="Yadelew Asrie" class="img1">
+                <div class="div01">3:50</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Yadelew Asrie" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">This video talks about the general knowledge of CSS and HTML</p>
+                    <p class="video-info">Yadelew Asrie</p>
+                    <p class="video-info">19M Views · 4 Years Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="2">
+            <div class="div1">
+                <img src="./YouTube_files/sete.jpg" alt="Setalem Mengesha" class="img1">
+                <div class="div01">6:03</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Setalem Mengesha" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">This video talks about the general knowledge on pharmacy</p>
+                    <p class="video-info">Setalem Mengesha</p>
+                    <p class="video-info">9M Views · 4 Years Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="3">
+            <div class="div1">
+                <img src="./YouTube_files/yade.jpg" alt="Yadelew Asrie" class="img1">
+                <div class="div01">1:59</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Yadelew Asrie" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">Advanced CSS Grid Techniques for Modern Layouts</p>
+                    <p class="video-info">Yadelew Asrie</p>
+                    <p class="video-info">5.2M Views · 2 Years Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="4">
+            <div class="div1">
+                <img src="./YouTube_files/sete.jpg" alt="Setalem Mengesha" class="img1">
+                <div class="div01">3:20</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Setalem Mengesha" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">JavaScript Fundamentals for Beginners</p>
+                    <p class="video-info">Setalem Mengesha</p>
+                    <p class="video-info">12M Views · 3 Years Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="5">
+            <div class="div1">
+                <img src="./YouTube_files/yade.jpg" alt="Yadelew Asrie" class="img1">
+                <div class="div01">3:10</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Yadelew Asrie" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">Responsive Web Design Best Practices</p>
+                    <p class="video-info">Yadelew Asrie</p>
+                    <p class="video-info">7.8M Views · 1 Year Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="6">
+            <div class="div1">
+                <img src="./YouTube_files/sete.jpg" alt="Setalem Mengesha" class="img1">
+                <div class="div01">3:04</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Setalem Mengesha" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">React Hooks Tutorial - Complete Guide</p>
+                    <p class="video-info">Setalem Mengesha</p>
+                    <p class="video-info">3.5M Views · 6 Months Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="7">
+            <div class="div1">
+                <img src="./YouTube_files/yade.jpg" alt="Yadelew Asrie" class="img1">
+                <div class="div01">10:15</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Yadelew Asrie" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">How to Create a YouTube Clone with HTML, CSS &amp; JavaScript</p>
+                    <p class="video-info">Yadelew Asrie</p>
+                    <p class="video-info">2.1M Views · 1 Month Ago</p>
+                </div>
+            </div>
+        </div><div class="video-preview" data-id="8">
+            <div class="div1">
+                <img src="./YouTube_files/sete.jpg" alt="Setalem Mengesha" class="img1">
+                <div class="div01">15:30</div>
+            </div>
+            <div class="imgand">
+                <div class="profile">
+                    <img src="./YouTube_files/—Pngtree—education logo vector image_4092977.png" alt="Setalem Mengesha" class="channel">
+                </div>
+                <div class="pra">
+                    <p class="video-title">Web Development Roadmap 2024</p>
+                    <p class="video-info">Setalem Mengesha</p>
+                    <p class="video-info">8.4M Views · 3 Months Ago</p>
+                </div>
+            </div>
+        </div></div>
+    </main>
+    
+    <!-- Modal for video player -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <div class="video-player">
+                <h3 id="modalVideoTitle"></h3>
+                <div class="video-placeholder">
+                    <p>Video Player</p>
+                    <p>This would be an embedded YouTube player</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./YouTube_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
