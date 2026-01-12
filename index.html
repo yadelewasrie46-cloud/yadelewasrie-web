@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yadelew Asrie">
+    <meta name="description" content="This webpage is developed for the purpose of storing videos on YouTube">
+    
+    <link rel="stylesheet" href="chase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>YouTube</title>
+    
+    <link rel="icon" href="you logo.png">
+    <link rel="icon" sizes="96x96" href="you tube logo.png">
+</head>
+<body>
+    <header>
+        <div class="boss">
+            <div class="left">
+                <img src="icons/hamburger-menu.svg" alt="hamburger-menu" class="hamburger-menu">
+                <img src="icons/youtube-logo.svg" alt="youtube-logo" class="youtube-logo">
+            </div>
+            
+            <div class="middle">
+                <div class="search-container">
+                    <input type="text" placeholder="Search" class="search-bar">
+                    <button class="search-btn btn1">
+                        <img src="icons/search.svg" alt="search" class="search-icon">
+                        <div class="tooltip">Search</div>
+                    </button>
+                </div>
+                <button class="voice-btn btn2">
+                    <img src="icons/voice-search-icon.svg" alt="voice-search-icon" class="voice-icon">
+                    <div class="tooltip">Search with your voice</div>
+                </button>
+            </div>
+            
+            <div class="right">
+                <button class="icon-btn btn3">
+                    <img src="icons/upload.svg" alt="upload" class="upload-icon">
+                    <div class="tooltip">Create</div>
+                </button>
+                <button class="icon-btn btn4">
+                    <img src="icons/youtube-apps.svg" alt="youtube-apps" class="apps-icon">
+                    <div class="tooltip">YouTube apps</div>
+                </button>
+                <button class="icon-btn btn5">
+                    <img src="icons/notifications.svg" alt="notifications" class="notifications-icon">
+                    <div class="tooltip">Notifications</div>
+                    <div class="notifications-count">3</div>
+                </button>
+                <img src="yade.jpg" alt="Yadelew" class="user-profile">
+            </div>
+        </div>
+    </header>
+    
+    <aside class="sidebar-container">
+        <div class="side-bar">
+            <div class="side-link active">
+                <img src="home (1).svg" alt="Home">
+                <div>Home</div>
+            </div>
+            <div class="side-link">
+                <img src="explore.svg" alt="Explore">
+                <div>Explore</div>
+            </div>
+            <div class="side-link">
+                <img src="subscriptions.svg" alt="Subscriptions">
+                <div>Subscriptions</div>
+            </div>
+            <div class="side-link">
+                <img src="originals.svg" alt="Originals">
+                <div>Originals</div>
+            </div>
+            <div class="side-link">
+                <img src="youtube-music.svg" alt="YouTube Music">
+                <div>YouTube Music</div>
+            </div>
+            <div class="side-link">
+                <img src="library.svg" alt="Library">
+                <div>Library</div>
+            </div>
+        </div>
+    </aside>
+    
+    <main class="main-content">
+        <div class="head" id="videoContainer">
+            <!-- Videos will be loaded here by JavaScript -->
+        </div>
+    </main>
+    
+    <!-- Modal for video player -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-player">
+                <h3 id="modalVideoTitle"></h3>
+                <div class="video-placeholder">
+                    <p>Video Player</p>
+                    <p>This would be an embedded YouTube player</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html
