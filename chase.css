@@ -1,0 +1,584 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 90px;
+    padding-left: 100px;
+    padding-right: 25px;
+    background-color: rgb(248, 248, 248);
+    font-family: 'Roboto', Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Header Styles */
+.boss {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    padding: 0 25px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+}
+
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+}
+
+.youtube-logo {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Middle Search Area - FIXED */
+.middle {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 40px;
+}
+
+.search-container {
+    display: flex;
+    flex: 1;
+}
+
+.search-bar {
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid rgb(204, 204, 204);
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #1c62b9;
+}
+
+.search-btn {
+    height: 40px;
+    width: 70px;
+    border: 1px solid rgb(204, 204, 204);
+    border-left: none;
+    background-color: #f8f8f8;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.voice-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f8f8f8;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.voice-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Right Section - FIXED ICON STYLING */
+.right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-width: 200px;
+    justify-content: flex-end;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* ICON IMAGES - FIXED SIZING */
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Specific icon adjustments */
+.upload-icon,
+.apps-icon,
+.notifications-icon,
+.search-icon,
+.voice-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Notification Bell - FIXED */
+.btn5 {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    background-color: #cc0000;
+    color: white;
+    top: 5px;
+    right: 5px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+    object-fit: cover;
+}
+
+.user-profile:hover {
+    border-color: #1c62b9;
+}
+
+/* Sidebar */
+.sidebar-container {
+    position: fixed;
+    left: 0;
+    top: 75px;
+    bottom: 0;
+    z-index: 99;
+}
+
+.side-bar {
+    width: 75px;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    overflow-y: auto;
+}
+
+.side-link {
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 10px 0;
+}
+
+.side-link:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.side-link.active {
+    background-color: #f0f0f0;
+}
+
+.side-link img {
+    height: 24px;
+    margin-bottom: 6px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.side-link div {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 75px;
+    padding: 20px 0;
+}
+
+.head {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-preview {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.video-preview:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.div1 {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.video-preview:hover .img1 {
+    transform: scale(1.05);
+}
+
+.div01 {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.imgand {
+    display: flex;
+    padding: 12px;
+    align-items: flex-start;
+}
+
+.profile {
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.channel {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pra {
+    flex: 1;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.video-info {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 4px;
+}
+
+/* Tooltip Styles - FIXED POSITIONING */
+.btn1, .btn2, .btn3, .btn4, .btn5 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 1000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn1:hover .tooltip,
+.btn2:hover .tooltip,
+.btn3:hover .tooltip,
+.btn4:hover .tooltip,
+.btn5:hover .tooltip {
+    opacity: 1;
+}
+
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-modal:hover {
+    color: #cc0000;
+}
+
+.video-player {
+    margin-top: 20px;
+}
+
+.video-placeholder {
+    background-color: #000;
+    color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    
+    .sidebar-container {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .head {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    
+    .middle {
+        margin: 0 15px;
+    }
+    
+    .search-bar {
+        width: 150px;
+    }
+    
+    .right {
+        gap: 15px;
+    }
+    
+    .boss {
+        padding: 0 15px;
+    }
+    
+    .icon-btn {
+        width: 35px;
+        height: 35px;
+        padding: 6px;
+    }
+    
+    .icon-btn img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        grid-template-columns: 1fr;
+    }
+    
+    .left {
+        min-width: auto;
+    }
+    
+    .hamburger-menu {
+        margin-right: 15px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .youtube-logo {
+        width: 80px;
+        height: 25px;
+    }
+    
+    .search-bar {
+        width: 120px;
+        height: 35px;
+    }
+    
+    .search-btn {
+        height: 35px;
+        width: 60px;
+    }
+    
+    .voice-btn {
+        height: 35px;
+        width: 35px;
+        margin-left: 5px;
+    }
+    
+    .right {
+        min-width: auto;
+        gap: 10px;
+    }
+    
+    .icon-btn {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    .icon-btn img {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .user-profile {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .notifications-count {
+        top: 3px;
+        right: 3px;
+        font-size: 10px;
+        padding: 1px 4px;
+        min-width: 16px;
+        height: 16px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0f0f0f;
+        color: #f1f1f1;
+    }
+    
+    .boss, .side-bar, .video-preview {
+        background-color: #212121;
+        border-color: #303030;
+    }
+    
+    .search-bar, .search-btn, .voice-btn {
+        background-color: #121212;
+        border-color: #303030;
+        color: #f1f1f1;
+    }
+    
+    .icon-btn:hover {
+        background-color: #303030;
+    }
+    
+    .tooltip {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #000;
+    }
+}
+
+/* Fallback for missing icons */
+.icon-btn img {
+    background-color: transparent;
+}
